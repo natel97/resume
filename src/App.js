@@ -1,17 +1,5 @@
 import "./App.css";
-
 import React from "react";
-
-const Range = ({ val }) => (
-  <>
-    <progress
-      className="is-hidden-print progress is-primary"
-      value={val}
-      max={10}
-    />
-    <span className="is-hidden-screen">{val}</span>
-  </>
-);
 
 const data = {
   left: {
@@ -75,31 +63,6 @@ const data = {
     class: "column",
     data: [
       {
-        name: "Featured Skills",
-        parts: [
-          {
-            name: "React",
-            sub: <Range val={8} />
-          },
-          {
-            name: "Java / Spring",
-            sub: <Range val={7} />
-          },
-          {
-            name: "TypeScript / NestJS",
-            sub: <Range val={7} />
-          },
-          {
-            name: "ASP.NET",
-            sub: <Range val={6} />
-          },
-          {
-            name: "Angular",
-            sub: <Range val={5} />
-          }
-        ]
-      },
-      {
         name: "Technology Exposures",
         parts: [
           {
@@ -118,21 +81,29 @@ const data = {
           {
             name: "Frameworks / Libraries",
             points: [
-              "PWA",
-              "SQL",
-              "Bulma",
-              "Flexbox",
+              "React",
               "React Hooks",
               "Redux",
-              "ChartJS",
               "NestJS",
+              "PWA",
+              "Bulma",
+              "Flexbox",
+              "ChartJS",
               "TypeORM",
               "GraphQL"
             ]
           },
           {
             name: "Programming Languages",
-            points: ["HTML / CSS / JavaScript", "Java", "C#", "Ruby", "Go"]
+            points: [
+              "HTML / CSS / JavaScript",
+              "Java",
+              "C#",
+              "Ruby",
+              "Go",
+              "TypeScript",
+              "SQL"
+            ]
           }
         ]
       }
