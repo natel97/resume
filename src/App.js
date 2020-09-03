@@ -33,7 +33,7 @@ const data = {
             sub: "January 2018 - August 2018",
             points: [
               "Implemented and enhanced features, including data backup and restore, a sidebar for browsing data, and a calculation toolbar for a document auditing web application",
-              "Refactored our back-end from one service and controller six services and controllers, separating concerns and improving testability, readability, and reducing bugs from merge conflictsbackend",
+              "Refactored our back-end from one service and controller six services and controllers, separating concerns and improving testability, readability, and reducing bugs from merge conflicts",
             ],
           },
           {
