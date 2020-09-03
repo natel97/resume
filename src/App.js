@@ -10,54 +10,43 @@ const data = {
         parts: [
           {
             name: "Daugherty Business Solutions, Minneapolis, MN",
-            sub: "September 2018 - Present",
+            sub: "March 2020 - Present",
             points: [
-              "Worked on multiple applications for multiple clients",
-              "Took initiative and extracted out common components for reuse for other projects",
-              "Acted as a lead for a prototype on a small team",
-              "Provided mentorship and utilized pair programming with a junior developer",
-              "Led demos and provided regular updates to stakeholders",
-              "Prioritized work between multiple projects",
-              "Uilized ElasticSearch for an application to decrease search times for metadata in a hadoop cluster",
+              "Assist with scrum ceremonies, product demos, and meetings with internal and external teams to solve integration issues, evaluate technical and business risks, and discuss product outcomes",
+              "Successfully released an application to production in two months, providing free training in 12 languages to restaurants around the world and reaching 250,000 page views in the first month",
+            ],
+          },
+          {
+            name: "Daugherty Business Solutions, Minneapolis, MN",
+            sub: "September 2018 - March 2020",
+            points: [
+              "Led development of an 8-week prototyping initiative to reduce packaging with an interactive mobile experience that provided product sourcing data, recipes, and nearby recycling locations to users",
+              "Developed an advanced searching web application for hundreds of databases, leading to an increase in data compliance and a decrease in query times from 6 seconds to under 100 milliseconds per search ",
+              "Collaborated with scientists to create an application to determine and correct food quality, resulting in higher quality products for some locations and reducing fryer oil waste by up to 60% in other locations",
+              "Provided mentorship and pair programed with junior developers",
               "Participated in book clubs and presented for lunch and learns",
-              "Worked on small internal projects as well as attended company and client hackathons",
-              "Helped migrate a codebase from TFS to GIT",
-              "Used Angular / .NET to create an application to help with document managment"
-            ]
+              "Worked on small internal projects and attended company and client hackathons",
+            ],
           },
           {
             name: "Magenic, Minneapolis, MN",
             sub: "January 2018 - August 2018",
             points: [
-              "Used VSTS to track application progress",
-              "Made SQL queries using JDBC in a Java / Spring backend",
-              "Contributed to the AngularJS frontend",
-              "Attended daily standups to announce progress to stakeholders"
-            ]
+              "Implemented and enhanced features, including data backup and restore, a sidebar for browsing data, and a calculation toolbar for a document auditing web application",
+              "Refactored our back-end from one service and controller six services and controllers, separating concerns and improving testability, readability, and reducing bugs from merge conflictsbackend",
+            ],
           },
           {
             name: "Cook Systems, Memphis, TN",
             sub: "October 2017 - December 2017",
             points: [
-              "Learned to work with Java / Spring applications",
-              "Used JPA to manage repository entities",
-              "Learned to work with frontend applications using AngularJS and Flexbox",
-              "Had four assessments throughout the program and was one of four to pass them all"
-            ]
-          }
-        ]
+              "Accepted into their trainee program with 12 other participants; passed all four assessments evaluated on software, leadership, and teamwork skills with only three other participants remaining at the end",
+              "Coordinated our group project and delegated tasks among ourselves with Google Docs and Trello",
+            ],
+          },
+        ],
       },
-      {
-        name: "Education",
-        parts: [
-          {
-            name: "A.A.S. in Mobile Application Development",
-            sub: "Central Lakes College, Brainerd, MN",
-            points: ["Computer Club President", "Student Senate"]
-          }
-        ]
-      }
-    ]
+    ],
   },
   right: {
     class: "column",
@@ -75,40 +64,35 @@ const data = {
               "Docker",
               "CI/CD",
               "DroneCI",
-              "VSTS"
-            ]
+            ],
           },
           {
             name: "Frameworks / Libraries",
-            points: [
-              "React",
-              "React Hooks",
-              "Redux",
-              "NestJS",
-              "PWA",
-              "Bulma",
-              "Flexbox",
-              "ChartJS",
-              "TypeORM",
-              "GraphQL"
-            ]
+            points: ["React", "Redux", "NestJS", "PWA", "TypeORM"],
           },
           {
             name: "Programming Languages",
+            points: ["HTML / CSS / JavaScript", "Java", "TypeScript", "SQL"],
+          },
+        ],
+      },
+      {
+        name: "Education",
+        parts: [
+          {
+            name: "A.A.S. in Mobile Application Development",
+            sub: "Central Lakes College, Brainerd, MN",
             points: [
-              "HTML / CSS / JavaScript",
-              "Java",
-              "C#",
-              "Ruby",
-              "Go",
-              "TypeScript",
-              "SQL"
-            ]
-          }
-        ]
-      }
-    ]
-  }
+              "GPA: 3.76",
+              "High Honors",
+              "Computer Club President",
+              "Student Senate",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 };
 
 const Section = ({ name, parts = [] }) => (
@@ -125,7 +109,7 @@ const Section = ({ name, parts = [] }) => (
           <div className="title is-size-5 has-text-white">{name}</div>
           <div className="subtitle is-size-6 has-text-white">{sub}</div>
           <ul className="is-size-6" style={{ marginBottom: "36px" }}>
-            {points.map(pt => (
+            {points.map((pt) => (
               <li style={{ margin: "12px 0" }}>- {pt}</li>
             ))}
           </ul>
@@ -139,9 +123,9 @@ function App() {
   return (
     <div className="App full-height full-width justify-between flex-column">
       <header>
-        <div className="container align-center row-wrap is-size-2 has-text-white justify-around">
+        <div className="container align-center row-wrap is-size-2 has-text-white justify-around top-header">
           <div>Nathanial Lubitz</div>
-          <div style={{ margin: "32px" }} className="column-wrap is-size-5">
+          <div className="column-wrap is-size-5">
             <a
               href="https://github.com/natel97"
               target="_blank"
@@ -169,7 +153,7 @@ function App() {
       </header>
       <div className="container">
         <div className="columns container">
-          {Object.values(data).map(col => (
+          {Object.values(data).map((col) => (
             <div className={col.class}>
               {col.data.map(({ name, parts }) => (
                 <Section name={name} parts={parts} />

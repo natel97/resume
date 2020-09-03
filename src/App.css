@@ -13,6 +13,14 @@
   .is-hidden-print {
     display: none;
   }
+  .top-header {
+    margin-bottom: 0px;
+  }
+  .top-header > .column-wrap {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 @media screen {
